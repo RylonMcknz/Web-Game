@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Game Title</title>
+	</head>
+	<body> 
+	    <canvas id="mainCanvas" style="float: left; display: inline-block; width: 85%"></canvas>
+	    <canvas id="menuCanvas" style="float: right; display: inline-block; width: 15%"></canvas>
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="http://localhost:8080/socket.io/socket.io.js"></script>
+		<script src="client/js/easeljs-0.8.2.min.js"></script>
+		<script src="client/js/webgl-0.8.2.min.js"></script>
+		<script src="client/js/pubsub.js"></script>
+		<script src="client/js/vectorMath.js"></script>
+		<script src="client/js/player.js"></script>
+		<script src="client/js/map.js"></script>
+		<script src="client/js/dice.js"></script>
+		<script src="client/js/app.js"></script>
+	</body>
+</html>
+
+<!-- <html>
+	<head>
+		<title>
+			Game Title
+		</title>
+	</head>
+	<body>
+		<div id="chat" style="height:500px"></div>
+		<form id="send-message">
+			<input size="35" id="message"></input>
+			<input type="submit"></input>
+		</form>
+
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="/socket.io/socket.io.js"></script>
+		<script>
+			jQuery(function($) {
+				var socket = io.connect();
+				var $messageForm = $('#send-message');
+				var $messageBox = $('#message');
+				var $chat = $('#chat');
+
+				$messageForm.submit(function(e) {
+					e.preventDefault();
+					socket.emit('send message', $messageBox.val());
+					$messageBox.val('');
+				});
+
+				socket.on('new message', function(data) {
+					$chat.append(data + "<br/>");
+				});
+
+				socket.on('greeting', function(data) {
+					$chat.append(data + "<br/>");
+				});
+			});
+		</script>
+	</body>
+</html> -->
